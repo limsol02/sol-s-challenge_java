@@ -1,0 +1,203 @@
+# 지난 주 정리 객관식 문제
+
+1. 자바의 기본 데이터 유형 중 문자 하나를 저장하는 데이터 타입은? b
+   - a) `String`
+   - b) `char`
+   - c) `int`
+   - d) `boolean`
+   char == > char[] ==>String(여러가지 기능메서드를 지원하기 위해 
+   							  문자열 type의 객체가 api로 만들어 짐)
+   char ch01 = 'A';
+   int chCode = ch01; // 저장은 정수로 되어 코드값이 연결되어있다.
+   //'A' ===> 65~~~
+   int chCode2 = 66;
+   char ch02 = (char)chCode2;
+   //코드값을 char로 처리할 떄는 casting (강제형 변환) 하여야한다.
+   
+2. Eclipse IDE에서 '자바 프로그램 실행'을 위한 기본 단축키는?c
+   - a) `Ctrl + S`
+   - b) `Ctrl + F5`
+   - c) `Ctrl + F11`
+   - d) `Alt + F4`
+   f11 : debug모드로 처리하여 에러가 났을때, 트래킹을 할 
+   수 있게 도와 준다.
+
+3. 자바에서 한 줄 주석 처리를 위한 문법은? c
+   - a) `/* comment */` : 다중행 주석 처리
+   - b) `<!-- comment -->' : htm1/xm1 형식의 코드 주석처리
+   - c) `// comment`  
+   - d) `-- comment` : DB에서 주석 처리..(sq1)
+   
+
+4. 자바에서 출력을 위해 사용하는 메소드가 아닌 것은? d
+   - a) `print()` : 줄 바꾸지 않고 처리되는 메소드
+   - b) `printf()` : format형식을 이용하여 화면에 출력할 때, 활용
+   - c) `println()` : 명령후, 줄바꿈을 포함하여 출력하는 메소드
+   - d) `printout()` 
+
+
+5. 자바에서 키보드로부터 입력을 받기 위한 클래스는? c
+   - a) `InputReader`
+   - b) `FileReader`
+   - c) `Scanner` 
+   - d) `Keyboard`
+   System.in : 자바에서 기본적인 입력처리하는 Steam
+   이것을 생성자의 매개변수로 처리하여 객체로 생성한 Scanner를 통해서
+   기본적인 입력을 할 수 있다.
+   Scanner sc = new Scanner(System.in);
+   sc.nextLine(); : 입력하고 enter키를 입력시, 줄단위로 데이터를
+   	문자열로 입력받아서 처리하는 메서드
+   		ex) 숫자형인 경우,  주로 형변환하여 처리하는 경우가 많다.
+   			int 01 = Integer.parseInt(sc.nwxtLine());
+   			정수형 문자열 입력시 정수로 변환
+   			double 02 = Double.parseDouble(sc.nwxtLine());
+   			실수형 문자열 입력시 실수로 변환
+   sc.nextInt() : 입력한 내용 정수형을 바꾸어서 처리하는 메서드
+   sc.nextDouble() : 입력한 내용을 실수형으로 바꾸어서 처리하는 메서드.
+   System.out : 자바에서 기본적인 출력처리하는 Steam
+
+
+x 6. 자바에서 지역 변수가 저장되는 메모리 영역은? b 
+   #- a) `stack`
+   - b) `heap`
+   - c) `method`
+   - d) `code`
+   기본데이터 유형 : stack영역에 선언과 할당을 동시에 처리하고 있다.
+    ex) int num01=5; 5라는 데이터를 num01이라는 이름으로
+    	stack영역에 할당처리된다.
+   객체형데이터 유형( 배열/클래서객체/내장된 객체 ):
+   	실제 객체는 heap영역에 할당되어 있고,
+   	stack영역에 변수를 선언하고 heap영역의 주소값을 할당하여 
+   	heap영역의 주소값으로 해당 객체를 찾아가는 형식으로 처리된다.
+   	ex) String str01="안녕하세요";
+   		"안녕하세요"라는 데이터는 heap영역에 특정한 주소에 할당되어 있고,
+   		str01이라는 이름으로 stack영역에 heap영역의 주소값을 
+   		할당하여 처리한다.
+
+7. 자바에서 객체가 저장되는 메모리 영역은? b
+   - a) `stack`
+   - b) `heap`
+   - c) `method`
+   - d) `code`
+
+8. 자바에서 정수형 변수로 사용되지 않는 것은? c
+   - a) `byte`
+   - b) `short`
+   - c) `double`
+   - d) `int`
+   정수형으로 저장 되는 데이터 유형 : 
+   	byte, short, **int, long, char
+   실수형으로 저장되는 데이터 유형 :
+   	float , **double
+
+9. 자바에서 문자 하나를 저장하는 데이터 타입은? b
+   - a) `str`
+   - b) `char`
+   - c) `string`
+   - d) `text`
+
+10. 자바의 논리 연산에서 '또는'을 의미하는 연산자는? c
+    - a) `&&` 논리 곱, 둘다 모두 true일떄, true
+    - b) `and`
+    - c) `||` 논리 합, 둘 중에 하나만 true일떄, true
+    - d) `or`
+
+11. 자바에서 변수 이름으로 사용할 수 없는 것은? b
+    - a) `_age`
+    - b) `2name`
+    - c) `userName`
+    - d) `first_name`
+    1) 특수문자는 _, $만 사용 허용
+    2) 반드시 문자로 시작. 숫자로 시작해서는 안된다.
+    3) 내장명령문 keyword(if, break, for)를 사용해서는 안된다.
+    4) 대문자와 소문자는 변수로 구분한다.
+    5) 라인 상위에 선언된 변수명을 하위에서 선언을 할 수 없다.
+    	단, 변수를 이용해서 다른 데이터를 할당하는 것은 가능.
+    	
+12. 자바에서 ' double a = (double) 5/2;`의 결과로 a에 저장되는 값은? a
+    - a) 2
+    - b) 2.5
+    - c) 3
+    - d) 2.0
+    int a = (double) 5/2;
+    //실수형을 정수형에 할당에 에러발생,,
+    
+    흐름을 왼쪽에서 오른쪽으로 흘러가나 대입은 오른쪽에서 왼쪽으로 대입된다
+    위 코드 5/2 ==> 실수형이 아니기에 
+    double a = (double) 5/2;
+    5.0/2 : 피연산자 둘중에 하나가 실수이기에
+    실수형 데이터로 처리된다.
+    
+
+13. 자바의 기본 데이터 유형 중 boolean형이 표현할 수 있는 값은? b
+    - a) `0`과 `1`
+    - b) `true`와 `false`
+    - c) `yes`와 `no`
+    - d) `on`와 `off`
+    boolean isTrue = true;
+     isTrue = false;
+     int pt = 70;
+     boolean isPass = pt>=60; 
+     // 비교연산식의 결과로 true/false 할당..
+
+14. `float` 타입 변수를 선언할 때 끝에 붙여야 하는 문자는? b
+   - a) `d`
+   - b) `f`/대문자 F도 가능
+   - c) `l`
+   - d) `s`
+   정수형은 기본데이터 유형이 int 이고, 실수형은 double 이므로
+   float유형일 때는 데이터의 끝에 f나 F를 붙여주어서 구분한다.
+   float num01=24.343f;
+   
+
+15. 자바에서 문자열을 저장하기 위한 데이터 타입은? c
+    - a) `char`
+    - b) `str`
+    - c) `String`
+    - d) `text`
+    String str = "안녕하세요";
+    String str1 = args[0]; // 입력하는 매개변수를 문자열로 가져온다(run as)
+    String str1 = sc.nextLine();
+    if(str2.equals("himan")){
+    
+    }
+    //문자열(String)을 비교할 때는 equals()매서드를 활용하여야 한다
+    주의) java에서는 문자열 == 문자열 비교시 정상작동을 하지 않는다.
+    주소값을 비교하기때문이다.
+
+16. 자바의 연산자 중 '같다'를 나타내는 연산자는? b
+    - a) `=`
+    - b) `==`
+    - c) `!=`
+    - d) `equal`
+
+17. 자바의 변수 선언에서 불합당한 것은? a
+    - a) `int 1var;`
+    - b) `double _value;`
+    - c) `char charValue;`
+    - d) `boolean isTrue;`
+
+x 18. 자바의 연산자 중 '부정'을 나타내는 연산자는? a (ad 둘다 ㅇㅇ 근데 d가 더 정확)
+    - a) `!=` : 비교연산자 두 수가 같지 않을때 true
+    - b) `not`
+    - c) `~`
+    # d) `!` : 논리연산자 : 해당 결과가 true ==> false
+    	false -- > true로 처리
+
+19. 자바의 연산자 중 '증가'를 나타내는 연산자는? a
+    - a) `++` : 증감연산자
+    - b) `+=`
+    - c) `up`
+    - d) `+1`
+    ++ : 1씩 증가
+    +=증가범위 : 해당 범위로 증가처리(증가+대입)
+    
+
+20. 자바에서 다양한 조건을 처리할 때 사용하는 문법은? D
+    - a) `loop`
+    - b) `if-else` 아 이거 한가지 조건이 true일 때와 false일때만 if
+    - c) `for`
+    - d) `switch-case` case별로 야러가지 조건처리
+    	if-else if-다양한 조건처리..
+    
+    
