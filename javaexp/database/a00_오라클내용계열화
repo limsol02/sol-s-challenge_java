@@ -37,7 +37,10 @@
 6. DB설계
 
 # 설치
-
+0. 다운로드된 압축파일
+	c:\b01_javaexp\DISK1
+	c:\b01_javaexp\sqldeveloper
+	
 1. oracle xe 11(서버)
 	설치
 	다운로드

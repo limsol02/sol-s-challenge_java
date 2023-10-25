@@ -47,7 +47,7 @@ SELECT empno, empno AS 사원번호별칭,
 	   job "직 책?"
 	FROM emp;
 SELECT * FROM emp;
--- empno : 사원번호, ename : 사원명, job : 직책,
+-- empno : 사원번호, ename : 사원명, job : 직책,==> 공백도 특수문자처럼 "" 안에 넣기
 -- mgr : 관리자번호, hiredate : 입사일, sal : 급 여!
 -- deptno : 부서번호 로 각 컬럼명을 alias를 사용하여 출력
 
