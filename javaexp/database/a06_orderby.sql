@@ -22,6 +22,9 @@ SELECT *
 FROM EMP
 ORDER BY EMPNO ;
 
+
+
+
 -- 사원번호 기준으로 내림차순 정렬
 SELECT *
 FROM EMP
