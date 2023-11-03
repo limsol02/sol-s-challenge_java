@@ -112,8 +112,8 @@ INSERT INTO emp01(ename, hiredate) values('마길동',to_date('2020/01/01','YYYY
 INSERT INTO emp01(ename, hiredate) values('마길동',to_date('2022-11-01','YYYY-MM-DD'));
 
 -- ex) 사원번호 9999로 사원정보를 입사날짜(2023/01/01)와 함께 전체 입력해보세요
-INSERT INTO emp01 values(9999,'홍길동','사원',9999,to_date('2023/01/01','YYYY/MM/DD'),
-2000,100,20);
+INSERT INTO emp01 values(9999,'백길동','사원',9999,
+to_date('2023/01/01 07:23:45','YYYY/MM/DD HH:MI:SS'),2000,100,20);
 
 
 

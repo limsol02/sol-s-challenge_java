@@ -7,6 +7,22 @@
 	   => insert into 테이블명(입력할 컬럼1, 컬럼2, 컬럼3) 
 	   		values (데이터1, 데이터2, 데이터3);
 	   		
+2. R : read 즉, 데이터를 읽어오는 처리를 하는 것을 말한다.
+	select * from emp;
+
+3. U : update = 데이터를 수정하는 것을 말한다
+	update emp
+		set ename = '홍길동',
+		job = '사원',
+	where empno = 7780;
+
+4. D : delete = 데이터를 삭제하는 것을 말한다.
+	delete 
+	from emp
+	where empno = 7780;
+	
+- 일반적으로 데이터에 대한 처리를 CRUD라는 용어를 이용해서 처리하는 것을 의미할 때 사용한다.
+	   		
  * */
 
 SELECT * FROM emp01;

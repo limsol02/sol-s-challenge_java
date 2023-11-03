@@ -12,7 +12,7 @@
 	select 
 	from 테이블명
 	where 조건문처리
-	order by 컬럼명[asc|desc], 컬럼2[asc|desc\]
+	order by 컬럼명[desc](asc은 일반적으로 선언안해도 default), 컬럼2[asc|desc]
 	- asc : 모든 정렬은 오름차순이 default이다. 즉, 옵션을 정하지 않으면 오름차순
 	- desc : 역순/내림차순 정렬
 		내림차순을 처리할 때는 컬럼명 desc라고 명시적으로 선언하여야한다.
@@ -21,9 +21,6 @@
 SELECT *
 FROM EMP
 ORDER BY EMPNO ;
-
-
-
 
 -- 사원번호 기준으로 내림차순 정렬
 SELECT *

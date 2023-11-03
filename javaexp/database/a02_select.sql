@@ -33,6 +33,10 @@ SELECT empno||'-'||ename 사원번호와사원명, sal, comm, sal+comm "급여+�
 		sal + nvl(comm,0) "급여+보너스(0)"
 FROM emp;
 -- nvl(컬럼명,데이터가 null일때 초기값설정) ==> 하나라도 null이면 연산이 불가능함
+-- null vs ' '(공백) ,0(default)차이
+-- null 데이터바 비어있는상태..
+-- 1000 + null ==> null
+-- nvl(숫자, 0), nvl(문자열,' ')
 
 -- ex3) 사원명-부서번호, 사원번호-사원명, 입사일을 출력하세요
 SELECT ename||'-'||deptno "사원명-부서번호", empno||'-'||ename "사원번호-사원명", hiredate 입사일 FROM EMP;
