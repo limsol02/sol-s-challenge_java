@@ -75,6 +75,22 @@ public class any {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
+//		String checkInStr = request.getParameter("checkIn");
+//		//if(checkInStr == null)
+//		//	checkInStr = "";
+//		String checkOutStr = request.getParameter("checkOut");
+//		//if (checkOutStr == null)
+//		//	checkOutStr = "";
+//
+//		// 사용자로부터 받은 checkIn과 checkOut 값을 Date로 변환
+//		
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//		Date checkIn = dateFormat.parse(checkInStr);
+//		Date checkOut = dateFormat.parse(checkOutStr);
+		
+//		체크아웃 입력 : <input type="text" name="checkOut"
+//				value="${param.emptyDate}" /> 
 
 	}
 

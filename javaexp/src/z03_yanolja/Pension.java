@@ -2,7 +2,7 @@ package z03_yanolja;
 
 
 public abstract class Pension {
-	public int reserCnt;
+	private int reserCnt;
 	private int reserDate;
 	
 	
