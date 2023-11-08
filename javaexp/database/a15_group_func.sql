@@ -64,3 +64,12 @@ FROM EMPLOYEES e GROUP BY department_id HAVING avg(salary)>=5000 ORDER BY DEPART
 
 
 
+
+
+
+
+
+
+
+
+
