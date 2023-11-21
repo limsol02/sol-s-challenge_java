@@ -22,6 +22,64 @@ SELECT deptno, dname FROM dept;
 -- ex3 ) salgrade 테이블의 전체컬럼을 출력
 SELECT * FROM SALGRADE ;
 
+
+SELECT ename FROM emp WHERE empno=7369;
+-- 확인해야할 사원번호[ text입력 ] [검색]<= 버튼 : 사원번호를입력
+-- 해당사원번호 해당하는 이름 @@@ 입니다. : 사원명을 출력 
+-- ==> DB서버에 접속 해서 그 결과를 받고(sql) 그 결과를 자바 객체로 변경(기능메서드)하여 화면에 최종결과 출력.
+
+/*
+# sql연습
+==> Java객체/변수로(기능메서드) 만드는방법
+해당사원번호 해당하는 이름 @@@ 입니다. : 사원명을 출력 
+ㄴ=> 여기서 출력할 내용을 메서드 리턴 유형과 리턴값으로 선언..
+
+리턴유형 메서드명(입력값){
+	return 실제리턴값;
+}
+
+### SELECT ename FROM emp WHERE empno=7369; ###
+에서 출력할 ename 을 리턴유형으로 설정하고 입력해야할 empno를 입력할 매개변수로 설정
+String getEname(int empno){
+	String sql="SELECT ename FROM emp WHERE empno="+empno;
+	String ename = null;
+	return ename;
+}
+ * */
+
+/*
+확인할 사원명 : [  ] [급여검색]
+해당 사원의 급여는 @@@ 입니다.
+ * */
+SELECT * FROM emp;
+SELECT sal FROM emp WHERE ename='SMITH';
+/*
+public Double getSal(String ename){
+	Double sal = 0;
+	String sql = "SELECT sal FROM emp WHERE ename='"+ename+"'";
+	return sal;
+}  
+ * */
+
+-- 사원번호 : [] 검색! 시 해당사원의 직책은 @@@ 입니다. 
+SELECT job FROM emp WHERE empno = 7369;
+/*
+public String getJob(int empno){
+	String job = null;
+	String sql = "SELECT job FROM emp WHERE empno = "+empno;
+	return job;
+}
+ * */
+
+
+
+
+/*
+sql 데이터 웹화면에 보이고자 할때... 
+java로 보일려고 하면
+ * */
+
+
 /*
 # 컬럼명 별칭으로 사용하기
 1. 모든 테이블의 구성요소 컬럼명은 select 컬럼명
