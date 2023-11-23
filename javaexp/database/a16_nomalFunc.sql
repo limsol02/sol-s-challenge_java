@@ -1,6 +1,6 @@
 -- # 많이 활용되는 일반 기능 함수
 
-/* 1. nvl(param1,param2) 
+/*### 1. nvl(param1,param2) 
 	- param1 : 컬럼이나 데이터
 	- param2 : param1의 컬럼이나 데이터가 null일때, 대신해서 처리해야할 데이터 내용
 	**/
@@ -12,7 +12,7 @@ SELECT EMPLOYEE_ID , SALARY , COMMISSION_PCT "보너스%", SALARY*nvl(COMMISSION
 
 
 
-/* 2. nvl2(컬럼 또는 데이터 , param1, param2) 
+/*### 2. nvl2(컬럼 또는 데이터 , param1, param2) 
 	- 컬럼이 null이 아닐때, param1처리
 	- 컬럼이 null일때, param2로 처리
  * */
@@ -23,14 +23,14 @@ SELECT ename, sal, comm, nvl2(comm,0.2,0.1)*100 "보너스%" FROM emp;
 --	comm이 null이 아닌경우 sal+comm을 처리하여 총계로 출력
 SELECT ename, sal, comm, nvl2(comm , comm+sal, nvl(comm,0)+SAL) "총계" FROM emp; 
 
-/* 3. nullif(컬럼1, 컬럼2) 
+/*### 3. nullif(컬럼1, 컬럼2) 
 	- 두개의 컬럼 또는 데이터가 동일하면 null, 그렇지않으면 컬럼1 출력
  * */
 SELECT nullif('a','a') 결과1, nullif('a','b'), 
 nvl(NULLIF('a','a'),'동일') 결과3
 FROM dual;
 
-/* 4. mod(컬럼1, 데이터)
+/*### 4. mod(컬럼1, 데이터)
 	- 특정 커럼의 데이터를 나눈 나머지값
  * */
 SELECT empno, mod(empno,2) "구분" FROM emp;
@@ -58,7 +58,7 @@ SELECT to_char(hiredate,'Q') 분기별, count(*) 인원수
 FROM emp GROUP BY to_char(hiredate,'Q') ORDER BY 분기별;
 
 
-/* 5. decode() 
+/*### 5. decode() 
 	1) 특정 데이터의 비교를 통한 데이터값을 처리할 때, 활용된다.
 	2) 형식
 		decode(컬럼|데이터, 1번값, 1번값일때 처리할 데이터,
@@ -84,7 +84,7 @@ DECODE(mod(empno,2) , 0 ,'청팀'
 					, 1 ,'홍팀') 팀구분
 FROM emp ;
 
-/* 6. case 키워드 처리(조건문처리)
+/*### 6. case 키워드 처리(조건문처리)
 
 1) decode의 확장된 함수형식을 표현식 또는 컬럼 값 '=' 비교를 통해
 조건에 일치하는 경우에만 다른 값으로 대치하게하고, case함수에서는 
