@@ -36,4 +36,38 @@
     ex ) grant create session to user01;
     
     conn user01/7777;
+    
+ # 사용자계정별로 자원에 대한 접근 권한 설정
+ 1. 테이블 생성 권한 부여
+ 	grant create table to 계정명
+ 	[ex] grant create table to user01;
+ 		user01에게 테이블을 생성할 수 있는 권한 부여
+ 		
+ 2. 전체 oracle에 사용되는 여러 객체(테이블, index, sequence 등등)에 대한 권한부여
+ 	grant resource to 계저염ㅇ
+ 	[ex] grant resource to user01;
+ 	
+ 3. 전체 계정에 대한 권한 부여 내용 확인하는 테이블(시스템 테이블)
+ 	dba_users
+ 	select * from dba_users;
+ 	
+ 4. 테이블(물리적으로 저장이 필요한 객체) tablespace라는 저장공간을 할당
+ 	alter user 사용자명 default tablespace user;
+ 		사용자가 사용할 물리적 tablespace 설정
+ 	
+ 	alter user 사용자명 quota unlimited on user;
+ 		사용자가 사용할 테이블 스테이스의 용량을 지정
 **/
+
+
+-- user03 / 9999 계정 과 비번을 만들고, 접속과 자원에 대한 접근권한을 줘서 테이블 생성과 테이블 데이터 입력 
+SELECT * FROM dba_users;
+
+CREATE USER user03 IDENTIFIED BY 9999;
+GRANT CREATE SESSION TO user03;
+GRANT resource TO user03;
+
+CREATE USER user04 IDENTIFIED BY 9999;
+GRANT CREATE SESSION TO user04;
+GRANT resource TO user04;
+
