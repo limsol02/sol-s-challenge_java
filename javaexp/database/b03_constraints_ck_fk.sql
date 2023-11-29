@@ -33,8 +33,8 @@ SELECT * FROM student06;
 # 외래키 설정 관계(foreign key)
 1. 연관관계에 있는 두 테이블에 대하여, 한쪽 테이블에 있는 데이터 기분으로
 	다른쪽 테이블의 데이터를 입력할 수 있게 하는 것을 말한다.
-
 	[ex] 사원테이블에서 deptno는 부서테이블에서 입력된 부서번호 이외의 데이터는 입력이 불가능하다.
+
 2. 기본형식
 	컬럼명 데이터유형 constraint 테이블명_컬럼명_fk references 테이블명(컬럼명)
  * */
@@ -47,7 +47,8 @@ CREATE TABLE emp12(
 INSERT INTO emp12 values(1000,'홍길동',10);
 INSERT INTO emp12 values(1001,'김길동',20);
 INSERT INTO emp12 values(1002,'신길동',30);
--- INSERT INTO emp12 values(1003,'마길동',50); ==> 50이라는 번호는 dept테이블의 deptno에는 존재하지않아, 입력하지못함(제약조건)
+-- INSERT INTO emp12 values(1003,'마길동',50); 
+-- ==> 50이라는 번호는 dept테이블의 deptno에는 존재하지않아, 입력하지못함(제약조건)
 SELECT * FROM emp12;
 
 

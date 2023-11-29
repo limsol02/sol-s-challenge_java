@@ -115,5 +115,7 @@ mgr 관리자번호, hiredate 입사일, sal "급 여!",
 deptno 부서번호 FROM emp;
 
 
+INSERT INTO test values(2,'김정현');
+INSERT INTO test values(3,'이정현');
 
 
