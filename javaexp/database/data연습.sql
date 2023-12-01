@@ -11,6 +11,20 @@ private double comm;
 private int deptno;
  */
 
+SELECT * FROM member01;
+CREATE TABLE member01(
+	mno NUMBER, 
+	name varchar2(30),
+	id varchar2(30),
+	pwd varchar2(30),
+	auth varchar2(30),
+	point NUMBER
+);
+
+INSERT INTO member01 values(1,'홍길동','himan','7777','관리자',1000);
+INSERT INTO member01 values(2,'김길동','hello','7777','일반',500);
+INSERT INTO member01 values(3,'핵길동','badman','7777','일반',800);
+INSERT INTO member01 values(4,'팍길동','goodman','7777','준관리자',1500);
 SELECT max(sal) FROM emp WHERE deptno=10;
 -- ex) 위 구문 처리할 때 메서드 선언..
 -- public double getMax(int deptno){double max = 0; return max;}
@@ -125,7 +139,7 @@ SELECT * FROM member01 WHERE name LIKE '%길동%';
 -- 로그인처리
 
 
-
+SELECT * FROM emp01;
 
 
 
