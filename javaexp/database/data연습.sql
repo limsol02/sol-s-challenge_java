@@ -141,7 +141,7 @@ SELECT * FROM member01 WHERE name LIKE '%길동%';
 
 SELECT * FROM emp01;
 
-
+CREATE TABLE emp02 as SELECT * from emp;
 
 
 
