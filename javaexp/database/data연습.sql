@@ -139,6 +139,9 @@ SELECT * FROM member01 WHERE name LIKE '%길동%';
 -- 로그인처리
 
 
+SELECT * FROM dept01;
+DELETE FROM dept01 WHERE DEPTNO=0;
+
 SELECT * FROM emp01;
 
 CREATE TABLE emp02 as SELECT * from emp;
