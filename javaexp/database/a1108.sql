@@ -19,6 +19,10 @@ SELECT ename 사원명, to_char(hiredate,'MM') "입사월",
 	END "입사월계절"
 FROM emp ORDER BY to_char(hiredate,'MM');
 
+SELECT * 
+	CASE WHEN userId 
+
+
 --1)EMP 테이블에서 부서 번호가 [조건]인 모든 직원의 이름을 선택하세요.
 --SELECT * FROM emp WHERE DEPTNO = 10;
 --public List<Emp> getEname(int deptno){List<Emp> elist = NEW ArrayList<Emp>(); RETURN elist;}

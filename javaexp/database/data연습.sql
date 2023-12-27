@@ -142,9 +142,45 @@ SELECT * FROM member01 WHERE name LIKE '%길동%';
 SELECT * FROM dept01;
 DELETE FROM dept01 WHERE DEPTNO=0;
 
-SELECT * FROM emp01;
+SELECT * FROM emp02;
 
 CREATE TABLE emp02 as SELECT * from emp;
 
+CREATE TABLE USER(
+NO number, 
+name varchar2(30),
+id varchar2(30),
+pwd varchar2(30),
+address varchar2(100),
+phone varchar2(15),
+
+);
 
 
+-- 유저 테이블
+CREATE TABLE Users (
+	userno number PRIMARY KEY, -- 회원번호(기본키)
+    UserID VARCHAR2(30) PRIMARY KEY, -- 유저아이디(기본커)
+    Name VARCHAR2(30) NOT NULL, -- 유저이름
+    Username VARCHAR2(30) UNIQUE, -- 닉네임
+    Password VARCHAR2(30) NOT null, -- 비밀번호
+    Address VARCHAR2(100) NOT null, -- 주소
+    PhoneNumber VARCHAR2(15) NOT null, -- 핸드폰 번호
+    PetStatus CHAR(1) CHECK (PetStatus IN ('Y', 'N')), -- 반려동물 여부
+    SubStatus CHAR(1) CHECK (SubscriptionStatus IN ('Y', 'N')), -- 구독여부
+    Role VARCHAR2(10) CHECK (Role IN ('Admin', 'User')) -- 역할
+);
+
+-- 멍멍 테이블
+CREATE TABLE Pets (
+    petno NUMBER PRIMARY KEY, -- 멍멍번호(기본키 엮을꺼임)
+    PetName VARCHAR2(30) NOT null, -- 멍멍이름
+    PetType VARCHAR2(30) NOT null, -- 멍멍?야옹?꿀꿀?찍찍?
+    Breed VARCHAR2(50), -- 멍멍 종류(선택란)
+    Age NUMBER NOT null, -- 멍멍 나이
+    Gender CHAR(1) CHECK (Gender IN ('F', 'M') , -- 동물 성별 
+    Neutered CHAR(1) CHECK (Neutered IN ('Y', 'N')), -- 중성화 여부
+    Weight NUMBER, -- 몸무게 (선택기입)
+    ImageURL VARCHAR2(255), -- 이미지파일 첨부
+    FOREIGN KEY (petno) REFERENCES Users(userno) -- 테이블 엮기
+);
