@@ -184,3 +184,40 @@ CREATE TABLE Pets (
     ImageURL VARCHAR2(255), -- 이미지파일 첨부
     FOREIGN KEY (petno) REFERENCES Users(userno) -- 테이블 엮기
 );
+
+
+SELECT * FROM LOCATIONS;
+-- 단위 객체 VO 설정 할 속성과 타입
+/*
+ * resultType을 쓰는 경우는 단위/다중리스트 상관없이 컬럼명 property를 동일하게 사용할수 있을 때..
+class Location{
+	private int location_id;
+	private String street_address;
+	private String postal_code;
+	private string city;
+	private String state_province;
+	private String country_id;
+}
+ * */
+CREATE TABLE emp01(
+	id varchar2(100)
+);
+
+SELECT * FROM jobs;
+/*
+private String job_id;
+private String job_title;
+private int min_salary;
+private int max_salary;
+ * */
+
+SELECT * FROM emp WHERE job LIKE '%'||''||'%' AND ename LIKE '%'||''||'%';
+
+/*
+ * 
+ * SELECT * FROM emp WHERE job LIKE '%'||''||'%' AND ename LIKE '%'||''||'%';
+private int no; // emp
+private String name; // ename 
+private double salary; // sal
+private String grade; // job
+ * */
